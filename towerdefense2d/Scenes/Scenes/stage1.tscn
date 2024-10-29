@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bx6l3p6fy5jjk"]
+
+[ext_resource type="PackedScene" uid="uid://djk72etpfg4sv" path="res://Scenes/Scenes/goblin.tscn" id="1_qgkid"]
+
+[sub_resource type="Curve2D" id="Curve2D_jcj6x"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1264, 262, 0, 0, 0, 0, 1234, 258, 0, 0, 0, 0, 1149, 258, 0, 0, 0, 0, 1000, 257, 0, 0, 0, 0, 796, 263, 0, 0, 0, 0, 788, 373, 0, 0, 0, 0, 785, 482, 0, 0, 0, 0, 720, 529, 0, 0, 0, 0, 551, 525, 0, 0, 0, 0, 458, 525, 0, 0, 0, 0, 448, 413, 0, 0, 0, 0, 439.536, 406.74, 0, 0, 0, 0, 291, 412, 0, 0, 0, 0, 247, 388, 0, 0, 0, 0, 217, 333, 0, 0, 0, 0, 220, 271, 0, 0, 0, 0, 220, 209, 0, 0, 0, 0, 221, 153)
+}
+point_count = 18
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_jcj6x")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(1264, 262)
+rotation = -3.00904
+loop = false
+
+[node name="Goblin" parent="PathFollow2D" instance=ExtResource("1_qgkid")]
+position = Vector2(8.10623e-06, -3.8147e-06)
+rotation = 3.05433

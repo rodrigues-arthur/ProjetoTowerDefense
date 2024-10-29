@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://djk72etpfg4sv"]
+
+[ext_resource type="Script" path="res://Scenes/Scenes/goblin.gd" id="1_1pmq3"]
+[ext_resource type="Texture2D" uid="uid://ssssftv3hxip" path="res://Assets/Characters/goblin-removebg-preview.png" id="2_n0sdk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1oro2"]
+radius = 451.185
+
+[node name="Goblin" type="CharacterBody2D"]
+position = Vector2(4, 8)
+script = ExtResource("1_1pmq3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, -7)
+rotation = 2.75346
+scale = Vector2(0.0336335, 0.0482314)
+skew = 0.214302
+shape = SubResource("CircleShape2D_1oro2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-4, -8)
+scale = Vector2(0.0996403, 0.134893)
+texture = ExtResource("2_n0sdk")
+flip_h = true

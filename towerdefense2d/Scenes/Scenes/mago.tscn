@@ -1,0 +1,55 @@
+[gd_scene load_steps=8 format=3 uid="uid://ucpdj2ry4d17"]
+
+[ext_resource type="Texture2D" uid="uid://b25noohg7hrhl" path="res://Assets/Characters/mago-removebg-preview.png" id="1_lw62l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xh0ai"]
+atlas = ExtResource("1_lw62l")
+region = Rect2(0, 0, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pw5xm"]
+atlas = ExtResource("1_lw62l")
+region = Rect2(204, 0, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ik20r"]
+atlas = ExtResource("1_lw62l")
+region = Rect2(0, 204, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nescj"]
+atlas = ExtResource("1_lw62l")
+region = Rect2(0, 408, 204, 204)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38jx4"]
+atlas = ExtResource("1_lw62l")
+region = Rect2(204, 204, 204, 204)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i727b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xh0ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pw5xm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ik20r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nescj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38jx4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mago" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-65.5, -62.5)
+scale = Vector2(0.357843, 0.387255)
+sprite_frames = SubResource("SpriteFrames_i727b")
+autoplay = "default"
+flip_h = true

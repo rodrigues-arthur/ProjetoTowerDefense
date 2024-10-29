@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhhd1khl5317f"]
+
+[ext_resource type="Texture2D" uid="uid://bgbyupcysvgk6" path="res://Assets/Characters/guerreiro-removebg-preview.png" id="1_jc1nh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agy23"]
+atlas = ExtResource("1_jc1nh")
+region = Rect2(0, 0, 287, 366)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j4qrm"]
+atlas = ExtResource("1_jc1nh")
+region = Rect2(287, 0, 287, 366)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ycb4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agy23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j4qrm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Guerreiro" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-117.25, -148)
+scale = Vector2(0.182927, 0.191257)
+sprite_frames = SubResource("SpriteFrames_3ycb4")
+autoplay = "default"
